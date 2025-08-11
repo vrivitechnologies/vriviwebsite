@@ -5,11 +5,13 @@ import Services from './Services';
 import Expertise from './Expertise';
 import OurProducts from './OurProducts';
 import CareersSection from './Careers';
+import TestingHero from './TestingHero';
 
 const HomePage = () => {
   return (
     <>
-      <Hero/>
+      {/* <Hero/> */}
+      <TestingHero></TestingHero>
        <section id="services">
         <Services />
       </section>
