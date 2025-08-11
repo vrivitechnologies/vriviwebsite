@@ -15,10 +15,16 @@ const VriStusyHomePage = () => {
       <Hero />
       <Youtube />
       <TrustedBy />
-      <Features />
-      <HowItWorks />
-      <Steps />
-      <Pricing />
+      <section id="Features">
+        <Features />
+      </section>
+      <section id="How It Works">
+        <HowItWorks />
+      </section>
+      {/* <Steps /> */}
+      <section id='Pricing'>
+        <Pricing />
+      </section>
     </>
   );
 };

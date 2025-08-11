@@ -8,7 +8,9 @@ const ProductLayout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-      <Footer />
+      <section id="footer">
+        <Footer />
+      </section>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Users, Building2, FileCheck2, ShieldCheck, Smartphone } from "lucide-react";
+import { Users, Building2, FileCheck2, ShieldCheck, Smartphone, Section } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
+import { FaChevronDown } from "react-icons/fa6";
 
 const headings = {
   heading: "Manage Every Step of the Study Abroad Journey in One Place",
@@ -110,47 +111,40 @@ const Features = () => {
   const [selected, setSelected] = useState(featuresData[0]);
 
   return (
-    <div className="pt-20 px-4">
+    <div id="Features" className="pt-20 px-4">
       {/* Heading */}
-      <div className="mx-auto text-center space-y-10 mb-30">
-        <p className="max-w-2xl mx-auto text-4xl font-semibold">
+      <div className="mx-auto text-center space-y-6 mb-10">
+        <p className="max-w-2xl mx-auto text-2xl md:text-4xl font-semibold">
           {headings.heading}
         </p>
-        <p className="text-[16px] max-w-md mx-auto ">
-          {headings.subheading}
-        </p>
+        <p className="text-[16px] max-w-md mx-auto">{headings.subheading}</p>
       </div>
 
-      {/* Layout */}
-      <div className="max-w-7xl mx-auto grid grid-cols-2 gap-3">
+      {/* Desktop Layout */}
+      <div className="hidden md:grid max-w-7xl mx-auto grid-cols-2 gap-3">
         {/* Left Cards */}
         <div className="space-y-5">
           {featuresData.map((item) => {
             const IconComponent = item.icon;
-            const isSelected = selected.id === item.id;
+            const isSelected = selected?.id === item.id;
 
             return (
               <div
                 key={item.id}
                 onClick={() => setSelected(item)}
-                className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer  transition-all ${isSelected ? `${item.color.bg} text-black` : "bg-white text-black"
+                className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${isSelected
+                    ? `${item.color.bg} text-black`
+                    : "bg-white text-black"
                   }`}
               >
-                <div
-                  className={`w-14 h-14 flex items-center justify-center rounded-full bg-black `}>
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-black">
                   <IconComponent
-                    className={`w-8 h-8  ${item.color.text}  `}
+                    className={`w-8 h-8 ${item.color.text}`}
                   />
                 </div>
                 <div>
-                  <p className={`font-semibold text-2xl `}>
-                    {item.title}
-                  </p>
-                  {item.subTitle && (
-                    <p className={`text-lg `}>
-                      {item.subTitle}
-                    </p>
-                  )}
+                  <p className="font-semibold text-2xl">{item.title}</p>
+                  {item.subTitle && <p className="text-lg">{item.subTitle}</p>}
                 </div>
               </div>
             );
@@ -159,30 +153,92 @@ const Features = () => {
 
         {/* Right Panel */}
         <div
-          className={`rounded-2xl p-8 shadow-lg space-y-5   ${selected.color.bg}`}
+          className={`rounded-2xl p-8 shadow-lg space-y-5 ${selected?.color?.bg || ""}`}
         >
-          <div className="space-y-8">
-            <p className="text-6xl font-semibold">{selected.details.heading}</p>
-            <p className="text-3xl ">{selected.details.subheading}</p>
-          </div>
-          <ul className="space-y-3">
-            {selected.details.points.map((point, i) => (
-              <li key={i} className="flex items-center gap-2.5 text-[16px]">
-                <span> <FaCheck className="text-3xl bg-black text-white rounded-full p-2"></FaCheck></span>
-                {point}
-              </li>
-            ))}
-          </ul>
-
-          {/* <div className="pt-5">
-            <button className="border   py-1.5 px-4 text-[16px] rounded-lg mb-2 hover:bg-white cursor-pointer hover:border-white transition">
-              Learn more
-            </button>
-          </div> */}
+          {selected && (
+            <>
+              <div className="space-y-8">
+                <p className="text-6xl font-semibold">
+                  {selected.details.heading}
+                </p>
+                <p className="text-3xl">{selected.details.subheading}</p>
+              </div>
+              <ul className="space-y-3">
+                {selected.details.points.map((point, i) => (
+                  <li key={i} className="flex items-center gap-2.5 text-[16px]">
+                    <FaCheck className="text-3xl bg-black text-white rounded-full p-2" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
+      </div>
+
+      {/* Mobile Accordion */}
+      <div className="md:hidden max-w-2xl mx-auto space-y-3">
+        {featuresData.map((item) => {
+          const IconComponent = item.icon;
+          const isSelected = selected?.id === item.id;
+
+          return (
+            <div key={item.id} className="rounded-lg border border-gray-200">
+              {/* Card Header */}
+              <div
+                onClick={() =>
+                  setSelected((prev) => (prev?.id === item.id ? null : item))
+                }
+                className={`flex items-center justify-between gap-4 p-4 cursor-pointer transition-all ${isSelected
+                    ? `${item.color.bg} text-black`
+                    : "bg-white text-black"
+                  }`}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black">
+                    <IconComponent
+                      className={`w-6 h-6 ${item.color.text}`}
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-lg">{item.title}</p>
+                    {item.subTitle && (
+                      <p className="text-sm">{item.subTitle}</p>
+                    )}
+                  </div>
+                </div>
+                <FaChevronDown
+                  className={`transition-transform duration-300 ${isSelected ? "rotate-180" : ""
+                    }`}
+                />
+              </div>
+
+              {/* Expandable Content */}
+              {isSelected && (
+                <div className={`p-4 space-y-4 border-t ${item.color.bg}`}>
+                  <div className="space-y-2">
+                    <p className="text-xl font-semibold">
+                      {item.details.heading}
+                    </p>
+                    <p className="text-base">{item.details.subheading}</p>
+                  </div>
+                  <ul className="space-y-2">
+                    {item.details.points.map((point, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm">
+                        <FaCheck className="text-lg bg-black text-white rounded-full p-1" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
+
 };
 
 export default Features;

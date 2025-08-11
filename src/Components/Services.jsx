@@ -5,17 +5,11 @@ const services = [
     {
         title: "Product Development",
         description: "End-to-end software solutions tailored to your business needs.",
-        icon: <Code size={40} className="text-indigo-500" />,
-        color: "from-indigo-50 to-indigo-100",
+        icon: <Code size={40} className="text-orange-500" />,
+        color: "from-orange-50 to-orange-100",
     },
     {
-        title: "Analytics",
-        description: "Use AI based forecasting models to leverage data to predict trends and make informed decisions.",
-        icon: <BarChart3 size={40} className="text-emerald-500" />,
-        color: "from-emerald-50 to-emerald-100",
-    },
-    {
-        title: "AIOps",
+        title: "AI",
         description: "Use AI to monitor, analyze, and optimize your infrastructure intelligently.",
         icon: <Cpu size={40} className="text-blue-500" />,
         color: "from-blue-50 to-blue-100",
@@ -26,6 +20,12 @@ const services = [
         icon: <Cloud size={40} className="text-purple-500" />,
         color: "from-purple-50 to-purple-100",
     },
+    {
+        title: "Analytics",
+        description: "Use AI based forecasting models to leverage data to predict trends and make informed decisions.",
+        icon: <BarChart3 size={40} className="text-emerald-500" />,
+        color: "from-emerald-50 to-emerald-100",
+    },
 ];
 
 const headinsg = {
@@ -35,7 +35,7 @@ const headinsg = {
 
 const Services = () => {
     return (
-        <section id="services" className="py-20 bg-white">
+        <section id="services" className="py-5 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-0 text-center">
                 <h2 className="text-3xl md:text-4xl font-semibold mb-4">
                     {headinsg.headingLine1}

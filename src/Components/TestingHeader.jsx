@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/VriviWebsiteLogo.webp";
 
-const Header = () => {
+const TestingHeader = () => {
     const [scrolled, setScrolled] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [productsOpen, setProductsOpen] = useState(false);
@@ -488,4 +488,4 @@ const Header = () => {
 
 };
 
-export default Header;
+export default TestingHeader;
