@@ -279,7 +279,7 @@ const HowItWorks = () => {
     return (
         <section
             id="How It Works"
-            className="pt-20 lg:max-w-7xl mx-auto w-full lg:px-0 px-4"
+            className="py-20 lg:max-w-7xl mx-auto w-full lg:px-0 px-4"
         >
             {/* Heading */}
             <h2 className="md:text-4xl text-2xl font-semibold text-center mb-10 text-black">

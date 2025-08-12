@@ -1,12 +1,12 @@
 import React from 'react';
-
-import Footer from './Components/Footer';
-import Header from './Products/VriStudy/Header';
+import HeaderWithBgWhite from './Components/Header/HeaderWithBgWhite';
+import Footer from './Components/Footer/Footer';
 
 const ProductLayout = ({ children }) => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <HeaderWithBgWhite></HeaderWithBgWhite>
       <main>{children}</main>
       <section id="footer">
         <Footer />

@@ -11,16 +11,35 @@ const headings = {
 const featuresData = [
   {
     id: 1,
-    title: "Lead & Student Management",
-    subTitle: "Track every inquiry to enrollment",
+    title: "AI Assistant",
+    subTitle: "Leverages AI models to simplify complex tasks",
     icon: Users, // use a relevant icon from your icon set
     color: {
       bg: "bg-cyan-300",
       text: "text-cyan-300",
     },
     details: {
+      heading: "AI Powered CRM",
+      subheading: "Leverages AI models to simplify complex tasks",
+      points: [
+        "Generate Letter of Recommendation",
+        "Compare LOR documents and compatability scores",
+        
+      ],
+    },
+  },
+  {
+    id: 2,
+    title: "Lead & Student Management",
+    subTitle: "Track every enquiry to enrollment",
+    icon: Users, // use a relevant icon from your icon set
+    color: {
+      bg: "bg-yellow-300",
+      text: "text-yellow-300",
+    },
+    details: {
       heading: "Seamlessly Manage Leads & Students",
-      subheading: "Convert inquiries into successful admissions.",
+      subheading: "Convert enquiries into successful admissions.",
       points: [
         "Add and track leads with status updates",
         "View student profiles and progress",
@@ -29,7 +48,7 @@ const featuresData = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "University Shortlisting",
     subTitle: "Match students to the right programs",
     icon: Building2, // or a graduation cap icon
@@ -48,7 +67,7 @@ const featuresData = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Document & Application Tracking",
     subTitle: "Stay on top of every requirement",
     icon: FileCheck2,
@@ -67,7 +86,7 @@ const featuresData = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Role-Based Access & Permissions",
     subTitle: "Control who can access what",
     icon: ShieldCheck,
@@ -86,7 +105,7 @@ const featuresData = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "Responsive Design",
     subTitle: "Seamless access across all devices",
     icon: Smartphone,
@@ -111,13 +130,13 @@ const Features = () => {
   const [selected, setSelected] = useState(featuresData[0]);
 
   return (
-    <div id="Features" className="pt-20 px-4">
+    <div id="Features" className="pt-10 px-4">
       {/* Heading */}
       <div className="mx-auto text-center space-y-6 mb-10">
         <p className="max-w-2xl mx-auto text-2xl md:text-4xl font-semibold">
           {headings.heading}
         </p>
-        <p className="text-[16px] max-w-md mx-auto">{headings.subheading}</p>
+        {/* <p className="text-[16px] max-w-md mx-auto">{headings.subheading}</p> */}
       </div>
 
       {/* Desktop Layout */}
@@ -133,8 +152,8 @@ const Features = () => {
                 key={item.id}
                 onClick={() => setSelected(item)}
                 className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${isSelected
-                    ? `${item.color.bg} text-black`
-                    : "bg-white text-black"
+                  ? `${item.color.bg} text-black`
+                  : "bg-white text-black"
                   }`}
               >
                 <div className="w-14 h-14 flex items-center justify-center rounded-full bg-black">
@@ -190,8 +209,8 @@ const Features = () => {
                   setSelected((prev) => (prev?.id === item.id ? null : item))
                 }
                 className={`flex items-center justify-between gap-4 p-4 cursor-pointer transition-all ${isSelected
-                    ? `${item.color.bg} text-black`
-                    : "bg-white text-black"
+                  ? `${item.color.bg} text-black`
+                  : "bg-white text-black"
                   }`}
               >
                 <div className="flex items-center gap-4">

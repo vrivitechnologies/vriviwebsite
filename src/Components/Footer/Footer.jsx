@@ -1,30 +1,6 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import logo from "../assets/VriviWebsiteLogo.webp"
-const footerText = {
-  companyName: "Vrivi Technologies",
-  companyDescription:
-    "At Vrivi Technologies, we are committed to empowering businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth. With a deep understanding of modern software development, our team of experts is dedicated to transforming ideas into reality and enabling our clients to thrive in a rapidly evolving digital landscape.",
-  quickLinks: [
-    { label: "Home", url: "/" },
-    { label: "Services", url: "#services" },
-    { label: "Products", url: "#products" },
-    { label: "Our Expertise", url: "#expertise" },
-    { label: "Careers", url: "#Careers" },
-  ],
-  contactInfo: {
-    email: "support@umbrella.com",
-    phone: "+91 98765 43210",
-    location: "Bangalore, India",
-  },
-  socialLinks: [
-    { icon: <FaFacebookF />, url: "#" },
-    { icon: <FaTwitter />, url: "#" },
-    { icon: <FaLinkedinIn />, url: "#" },
-    { icon: <FaInstagram />, url: "#" },
-  ],
-  copyright: `© 2023 Corporate WordPress Theme By WP Radiant | Proudly powered by WordPress`,
-};
+import { footerText } from "./FooterContent";
+import logo from "../../assets/VriviWebsiteLogo.webp"
 
 const Footer = () => {
   return (
@@ -61,7 +37,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-3">Contact</h3>
             <ul className="space-y-2 text-sm">
               <li>Email: {footerText.contactInfo.email}</li>
-              <li>Phone: {footerText.contactInfo.phone}</li>
+              <li>WhatsApp: {footerText.contactInfo.WhatsApp}</li>
               <li>Location: {footerText.contactInfo.location}</li>
             </ul>
           </div>

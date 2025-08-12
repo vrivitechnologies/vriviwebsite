@@ -195,6 +195,8 @@ const Hero = () => {
 
 
   return (
+
+
     <section
       className="py-16 pt-40 px-4 sm:px-6 text-center lg:h-[calc(100vh+300px)] h-screen flex justify-center "
     >
@@ -259,6 +261,79 @@ const Hero = () => {
         </div>
       </div>
     </section>
+  
+
+
+
+
+//   <section
+//   className="py-16 pt-40 px-4 sm:px-6 text-center lg:h-[calc(100vh+300px)] h-screen flex justify-center"
+//   style={{
+//     background: "linear-gradient(135deg, #b3e5fc, #ffffff, #e1bee7)",
+//   }}
+// >
+//   <div className="relative z-10 w-full max-w-5xl mx-auto space-y-6">
+//     {/* Badge */}
+//     <div>
+//       <div className="inline-block px-4 py-1.5 mb-1 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">
+//         {content.badge}
+//       </div>
+//     </div>
+
+//     {/* Headings */}
+//     <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-transparent bg-clip-text"
+//       style={{
+//         backgroundImage: "linear-gradient(to right, #00aaff, #a020f0)",
+//       }}
+//     >
+//       {content.headingLine1}
+//     </h1>
+
+//     <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-transparent bg-clip-text"
+//       style={{
+//         backgroundImage: "linear-gradient(to right, #00aaff, #a020f0)",
+//       }}
+//     >
+//       {content.headingLine2Prefix}{" "}
+//       <span className="text-blue-500">
+//         {text}
+//         <span className="inline">|</span>
+//       </span>
+//     </h2>
+
+//     {/* Subtext */}
+//     <p className="text-[16px] mt-8 max-w-lg mx-auto text-blue-900/70">
+//       {content.subText}
+//     </p>
+
+//     {/* Form */}
+//     <form className="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+//       <input
+//         type="email"
+//         placeholder={content.emailPlaceholder}
+//         className="px-4 py-3 w-full sm:w-64 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
+//       />
+//       <button className="px-4 py-3 w-full sm:w-auto text-white bg-blue-500 rounded-xl hover:bg-blue-600 transition">
+//         {content.buttonText}
+//       </button>
+//     </form>
+
+//     {/* Features */}
+//     <div className="mt-20 flex flex-wrap justify-center gap-6 text-blue-900/70">
+//       {features.map((feature, idx) => {
+//         const Icon = feature.icon;
+//         return (
+//           <div key={idx} className="flex items-center gap-2">
+//             <Icon className="w-5 h-5 text-blue-400" />
+//             <span>{feature.text}</span>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   </div>
+// </section>
+
+  
   );
 
 

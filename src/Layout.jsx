@@ -1,14 +1,15 @@
 // src/Components/Layout/Layout.js
 import React from 'react';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import TestingHeader from './Components/TestingHeader';
+import HeaderWithBgWhite from './Components/Header/HeaderWithBgWhite';
+import Footer from './Components/Footer/Footer';
+import HeaderWithTextWhite from './Components/Header/HeaderWithTextWhite';
 
 const Layout = ({ children }) => {
   return (
     <>
       {/* <Header /> */}
-      <TestingHeader></TestingHeader>
+      <HeaderWithBgWhite></HeaderWithBgWhite>
+      {/* <HeaderWithTextWhite></HeaderWithTextWhite> */}
       <main>{children}</main>
       <section id="footer">
         <Footer />

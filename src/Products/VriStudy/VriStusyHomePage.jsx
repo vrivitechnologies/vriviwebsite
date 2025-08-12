@@ -12,19 +12,12 @@ import Features from './Features';
 const VriStusyHomePage = () => {
   return (
     <>
-      <Hero />
-      <Youtube />
-      <TrustedBy />
-      <section id="Features">
-        <Features />
-      </section>
-      <section id="How It Works">
-        <HowItWorks />
-      </section>
-      {/* <Steps /> */}
-      <section id='Pricing'>
-        <Pricing />
-      </section>
+      {/* <Hero /> */}
+      {/* <Youtube /> */}
+      {/* <TrustedBy /> */}
+      <Pricing />
+      <Features />
+      <HowItWorks />
     </>
   );
 };

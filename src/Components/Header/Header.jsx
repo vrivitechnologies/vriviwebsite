@@ -3,6 +3,19 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/VriviWebsiteLogo.webp";
 
+export const content = {
+    logo: logo,
+    rightLinks: {
+        Services: "Services",
+        Products: "Products",
+        Careers: "Careers",
+        AboutUs: "About Us",
+        contact: "Contact Us",
+        Home:"Home"
+    },
+    product: "VRISTUDY - Study Abroad CRM"
+};
+
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -22,6 +35,7 @@ const Header = () => {
             AboutUs: "About Us",
             contact: "Contact Us",
         },
+        product: "VRISTUDY - Study Abroad CRM"
     };
 
     // Smooth scroll to section (with header offset)
@@ -90,7 +104,7 @@ const Header = () => {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 w-full items-center bg-white justify-center py-2 z-50 transition-all duration-300 ${scrolled ? "bg-white backdrop-blur-md" : ""
+                className={`fixed top-0 left-0 w-full items-center justify-center py-2 z-50 transition-all duration-300 ${scrolled ? "bg-white/60 backdrop-blur-md" : ""
                     }`}
             >
                 <div className="max-w-7xl md:px-0 px-6 mx-auto h-12 flex items-center justify-between">
@@ -103,11 +117,21 @@ const Header = () => {
                     <nav className="hidden md:flex items-center space-x-6 font-medium">
                         <button
                             type="button"
+                            onClick={() => handleScrollTo("Home")}
+                            className="nav-link"
+                            
+                        >
+                            {content.rightLinks.Services}
+                        </button>
+
+                        <button
+                            type="button"
                             onClick={() => handleScrollTo("services")}
                             className="nav-link"
                         >
                             {content.rightLinks.Services}
                         </button>
+                        
 
                         {/* Products (desktop) */}
                         <div
@@ -132,7 +156,7 @@ const Header = () => {
                                         onClick={handleNavigateProducts}
                                         className="block w-full text-sm cursor-pointer text-left px-4 py-2 hover:bg-gray-100"
                                     >
-                                        Study Abroad
+                                        {content.product}
                                     </button>
                                 </div>
                             )}
@@ -291,201 +315,6 @@ const Header = () => {
             </div>
         </>
     );
-
-
-
-
-
-
-
-
-
-
-
-    // return (
-    //     <>
-    //         <header
-    //             className={`fixed top-0 left-0 w-full items-center justify-center py-2 z-50 transition-all duration-300 ${scrolled ? "bg-white/60 backdrop-blur-md" : ""
-    //                 }`}
-    //         >
-    //             <div className="max-w-7xl md:px-0 px-6 mx-auto h-18 flex items-center justify-between">
-    //                 {/* Logo */}
-    //                 <div className="flex items-center">
-    //                     <img src={logo} alt="Logo" className="h-14 w-auto" />
-    //                 </div>
-
-    //                 {/* Desktop Menu */}
-    //                 <nav className="hidden md:flex items-center space-x-6 font-medium">
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("services")}
-    //                         className={`nav-link ${!scrolled ? "text-white" : "text-gray-900"}`}
-    //                     >
-    //                         {content.rightLinks.Services}
-    //                     </button>
-
-    //                     <div
-    //                         className="relative flex cursor-pointer items-center space-x-1"
-    //                         ref={productsRefDesktop}
-    //                     >
-    //                         <button
-    //                             type="button"
-    //                             onClick={() => setProductsOpen((p) => !p)}
-    //                             className={`nav-link flex items-center cursor-pointer space-x-1 ${!scrolled ? "text-white" : "text-gray-900"}`}
-    //                             aria-expanded={productsOpen}
-    //                             aria-haspopup="menu"
-    //                         >
-    //                             <span>{content.rightLinks.Products}</span>
-    //                             <ChevronDown className={`h-4 w-4 mt-1 flex-shrink-0 ${!scrolled ? "text-white" : "text-gray-900"}`} />
-    //                         </button>
-
-    //                         {productsOpen && (
-    //                             <div className="absolute top-full right-0 mt-2 w-48 bg-white shadow-xl rounded-md py-2 z-50">
-    //                                 <button
-    //                                     type="button"
-    //                                     onClick={handleNavigateProducts}
-    //                                     className="block w-full text-sm cursor-pointer text-left px-4 py-2 hover:bg-gray-100"
-    //                                 >
-    //                                     Study Abroad
-    //                                 </button>
-    //                             </div>
-    //                         )}
-    //                     </div>
-
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("Careers")}
-    //                         className={`nav-link ${!scrolled ? "text-white" : "text-gray-900"}`}
-    //                     >
-    //                         {content.rightLinks.Careers}
-    //                     </button>
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("footer")}
-    //                         className={`nav-link ${!scrolled ? "text-white" : "text-gray-900"}`}
-    //                     >
-    //                         {content.rightLinks.AboutUs}
-    //                     </button>
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("footer")}
-    //                         className={`nav-link ${!scrolled ? "text-white" : "text-gray-900"}`}
-    //                     >
-    //                         {content.rightLinks.contact}
-    //                     </button>
-    //                 </nav>
-
-
-    //                 {/* Mobile Menu Button */}
-    //                 <div className="md:hidden z-50">
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => setSidebarOpen((s) => !s)}
-    //                         aria-expanded={sidebarOpen}
-    //                         aria-label="Toggle menu"
-    //                     >
-    //                         {sidebarOpen ? (
-    //                             <X className="h-6 w-6 text-black" />
-    //                         ) : (
-    //                             <Menu className="h-6 w-6 text-white cursor-pointer" />
-    //                         )}
-    //                     </button>
-    //                 </div>
-    //             </div>
-    //         </header>
-
-    //         {/* Mobile Sidebar */}
-    //         <div
-    //             className={`fixed inset-0 transition-all duration-300 z-[60] ${sidebarOpen ? "translate-x-0" : "translate-x-full"
-    //                 }`}
-    //         >
-    //             {/* Overlay */}
-    //             <div
-    //                 className={`fixed inset-0 bg-black/40 transition-opacity duration-300 ${sidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"
-    //                     }`}
-    //                 onClick={() => setSidebarOpen(false)}
-    //             />
-
-    //             {/* Drawer */}
-    //             <div className="fixed top-0 right-0 w-72 h-full bg-white shadow-lg p-6 flex flex-col z-[70]">
-    //                 <div className="flex items-center justify-between mb-6">
-    //                     <img src={logo} alt="Logo" className="h-10" />
-    //                     <button type="button" onClick={() => setSidebarOpen(false)}>
-    //                         <X className="h-6 w-6 text-black" />
-    //                     </button>
-    //                 </div>
-
-    //                 <nav className="flex flex-col space-y-4 text-gray-800 font-medium">
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("services")}
-    //                         className="hover:text-black text-left"
-    //                     >
-    //                         {content.rightLinks.Services}
-    //                     </button>
-
-    //                     {/* Mobile Products Dropdown */}
-    //                     <div
-    //                         className="relative flex items-center space-x-1"
-    //                         ref={productsRefMobile}
-    //                     >
-    //                         <button
-    //                             type="button"
-    //                             onClick={() => setProductsOpen((p) => !p)}
-    //                             className="nav-link"
-    //                         >
-    //                             {content.rightLinks.Products}
-    //                         </button>
-    //                         <button
-    //                             type="button"
-    //                             onClick={() => setProductsOpen((p) => !p)}
-    //                             className="p-1"
-    //                             aria-label="Toggle products"
-    //                         >
-    //                             <ChevronDown className="h-4 w-4 mt-1 flex-shrink-0" />
-    //                         </button>
-    //                         {productsOpen && (
-    //                             <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-xl rounded-md py-2 z-50">
-    //                                 <button
-    //                                     onClick={handleNavigateProducts}
-    //                                     className="block w-full text-sm text-left px-4 py-2 hover:bg-gray-100"
-    //                                 >
-    //                                     Study Abroad
-    //                                 </button>
-    //                             </div>
-    //                         )}
-    //                     </div>
-
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("Careers")}
-    //                         className="hover:text-black text-left"
-    //                     >
-    //                         {content.rightLinks.Careers}
-    //                     </button>
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("footer")}
-    //                         className="hover:text-black text-left"
-    //                     >
-    //                         {content.rightLinks.AboutUs}
-    //                     </button>
-    //                     <button
-    //                         type="button"
-    //                         onClick={() => handleScrollTo("footer")}
-    //                         className="hover:text-black text-left"
-    //                     >
-    //                         {content.rightLinks.contact}
-    //                     </button>
-    //                 </nav>
-    //             </div>
-    //         </div>
-    //     </>
-    // );
-
-
-
-
 };
 
 export default Header;

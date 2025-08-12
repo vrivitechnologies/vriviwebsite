@@ -1,2 +1,16 @@
 @import "tailwindcss";
 
+/* For Chrome, Safari, Edge */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Keep smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
