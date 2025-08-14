@@ -94,7 +94,7 @@ const HeaderWithBgWhite = () => {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 w-full bg-blue-50 items-center  justify-center py-2 z-50 transition-all duration-300 ${scrolled ? "bg-white backdrop-blur-md" : ""
+                className={`fixed top-0 left-0 w-full bg-blue-50 items-center  justify-center py-2 z-50 transition-all duration-300 ${scrolled ? "bg-blue-50" : ""
                     }`}
             >
                 <div className="w-full  px-6 mx-auto h-12 flex items-center justify-between">
@@ -280,7 +280,7 @@ const HeaderWithBgWhite = () => {
                                         onClick={handleNavigateProducts}
                                         className="block w-full text-sm text-left px-4 py-2 hover:bg-gray-100"
                                     >
-                                        Study Abroad
+                                        {content.product}
                                     </button>
                                 </div>
                             )}

@@ -51,15 +51,15 @@ const Hero1Content = ({ pauseAutoSlide, resumeAutoSlide }) => {
                     {/* Badge */}
                     <div className="flex items-center gap-2  ">
                         <div
-                        className="inline-block text-4xl mt-8 font-bold bg-purple-500 text-white px-6 py-2.5 rounded-full"
-                    >
-                        {Productcontent.badge}
-                    </div>
-                    <div
-                        className="inline-block text-3xl mt-12 font-bold text-blue-500"
-                    >
-                        {Productcontent.subBadge}
-                    </div>
+                            className="inline-block md:text-4xl text-lg mt-8 font-bold bg-purple-500 text-white md:px-6 px-3 md:pt-2 md:pb-2.5 pt-1 pb-1.5 rounded-full"
+                        >
+                            {Productcontent.badge}
+                        </div>
+                        <div
+                            className="inline-block md:text-3xl text-[16px] md:mt-12 mt-10 font-bold text-blue-500"
+                        >
+                            {Productcontent.subBadge}
+                        </div>
                     </div>
 
                     <p className="text-3xl font-semibold mt-6 ">
@@ -118,13 +118,14 @@ const Hero1Content = ({ pauseAutoSlide, resumeAutoSlide }) => {
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className="md:w-1/2 flex justify-center ">
+                <div className="hidden lg:flex md:w-1/2 justify-center">
                     <img
                         src={Productcontent.studyabroadImage}
                         alt="Study Abroad"
                         className="max-w-full h-full rounded-xl shadow-2xl border-4 border-white/10"
                     />
                 </div>
+
                 {showForm && <StartFreeTrail onClose={() => setShowForm(false)} />}
             </div>
         </>
@@ -141,7 +142,7 @@ const Hero2Content = () => {
                     {Vrivicontent.headingLine1}
                 </h1> */}
                 <div
-                    className="itext-3xl sm:text-4xl md:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#a020f0]  to-[#00aaff] bg-clip-text text-transparent"
+                    className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#a020f0]  to-[#00aaff] bg-clip-text text-transparent"
                 >
                     {Vrivicontent.headingLine1}
                 </div>
@@ -213,7 +214,7 @@ const HeroWithNewContent = () => {
             {/* Gradient background */}
             <div
                 className="absolute inset-0 z-0 bg-white"
-               
+
             ></div>
 
             {/* Slides wrapper */}

@@ -47,12 +47,12 @@ const StartFreeTrial = ({ onClose , subscriptionType }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Background overlay */}
       <div
-        className="fixed inset-0 bg-black opacity-50"
+        className="fixed inset-0 bg-black opacity-30"
         onClick={onClose}
       ></div>
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 z-10 text-center animate-fadeIn">
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full md:max-w-md max-w-sm p-8 z-10 text-center animate-fadeIn">
         <button
           onClick={onClose}
           className="absolute top-5 right-5 cursor-pointer transition-colors"
@@ -105,7 +105,7 @@ const StartFreeTrial = ({ onClose , subscriptionType }) => {
               <div className="flex justify-end w-full">
                 <button
                 type="submit"
-                className=" bg-gradient-to-r  from-blue-500 to-purple-500 text-white py-2 px-6 rounded-full  transition-opacity cursor-pointer shadow-md"
+                className=" bg-gradient-to-r  from-blue-500 to-purple-500 text-white pt-2 pb-2.5 px-6 rounded-full  transition-opacity cursor-pointer shadow-md"
               >
                 Submit
               </button>

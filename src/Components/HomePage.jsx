@@ -29,12 +29,7 @@ const HomePage = () => {
 
   return (
     <>
-      {/* <Hero/> */}
-      {/* <HeroWithBluePurpleGradient></HeroWithBluePurpleGradient> */}
-      {/* <HeroWithImage></HeroWithImage> */}
-      {/* <HeroWithImageBluePurpleGradient></HeroWithImageBluePurpleGradient> */}
       <HeroWithNewContent></HeroWithNewContent>
-      {/* <OurProducts></OurProducts> */}
       <ProductWithImage></ProductWithImage>
       <Services />
 

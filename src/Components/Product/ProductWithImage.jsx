@@ -20,7 +20,7 @@ const ProductWithImage = () => {
 
                 {products.map((product) => (<>
                     <div className="bg-white rounded-xl shadow-2xl border-blue-100 border-2 ">
-                        <h3 className="text-2xl font-semibold  text-purple-500 py-2 text-center rounded-t-xl">
+                        <h3 className="md:text-2xl text-lg py-3 font-semibold  text-purple-600  text-center rounded-t-xl ">
                             {product.name}
                         </h3>
                         <div key={product.id}
@@ -54,7 +54,7 @@ const ProductWithImage = () => {
                                 <button
                                     onClick={() => navigate(product.link)}
                                     className="px-6 py-2 text-sm font-medium cursor-pointer text-white bg-gradient-to-r from-blue-500 to-purple-600 
-                                    rounded-full shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-purple-700 
+                                    rounded-full shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-blue-700 
                                      transition-all duration-300"
                                 >
                                     Learn More →
