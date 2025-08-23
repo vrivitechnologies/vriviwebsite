@@ -22,7 +22,7 @@ const Pricing = () => {
                 "2 Users",
                 "20000 leads"
             ],
-            button: "Start Free Trail",
+            button: "Start Free Trial",
             subscriptionType: "Starter"
         },
         {
@@ -43,7 +43,7 @@ const Pricing = () => {
                 "Sub-domain",
                 "Weekly Backup (max 4 weeks)",
             ],
-            button: "Start Free Trail",
+            button: "Start Free Trial",
             subscriptionType: "Pro"
         },
         {
@@ -64,96 +64,10 @@ const Pricing = () => {
                 "Weekly Backup (max 1 years)",
             ],
             ai: "AI Assistant",
-            button: "Start Free Trail",
+            button: "Start Free Trial",
             subscriptionType: "Enterprise"
         }
     ];
-
-    // return (
-    //     <div
-    //         className="relative py-20 min-h-screen px-4"
-    //         style={{
-    //             backgroundImage: `
-    //   radial-gradient(circle, white 2px, transparent 2px)
-    // `,
-    //             backgroundSize: "20px 20px",
-    //             backgroundColor: "#e5f3fd", // light blue
-    //         }}
-    //     >
-    //         <p className="text-center bg-green-400 py-1 px-3 max-w-md rounded-full  mx-auto mb-10">
-    //             30 days free trial. No contract or credit card required.
-    //         </p>
-
-    //         {/* Pricing cards */}
-    //         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-5">
-    //             {pricingPlans.map((plan, index) => (
-    //                 <div
-    //                     key={index}
-    //                     className={`rounded-2xl text-white relative flex flex-col ${plan.badge ? "bg-blue-600" : "bg-purple-900"
-    //                         }`}
-    //                 >
-    //                     <div className="border border-b border-white text-center rounded-t-2xl px-6 py-2">
-
-    //                         {plan.badge && (
-    //                             <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-yellow-400 text-black px-3 py-1 text-xs font-bold rounded-md shadow-md">
-    //                                 {plan.badge}
-    //                             </div>
-    //                         )}
-
-    //                         <h3 className="text-sm font-semibold ">{plan.name}</h3>
-    //                         <div className="text-3xl font-bold flex text-center items-center justify-center">
-    //                             <FaIndianRupeeSign></FaIndianRupeeSign>
-    //                             <p>{plan.price}</p>
-    //                         </div>
-    //                         <p><span className="text-xs font-normal">{plan.billing}</span></p>
-    //                     </div>
-
-    //                     <ul className="space-y-2 flex-1 rounded-2xl  px-6 py-3">
-    //                         {plan.features.map((feature, i) => (
-    //                             <li key={i} className="flex items-start">
-    //                                 <FiCheck className="text-yellow-400 mt-1 mr-2" />
-    //                                 <span>{feature}</span>
-    //                             </li>
-
-    //                         ))}
-    //                     </ul>
-    //                     {plan.ai && (
-    //                         <div className="flex  px-6">
-    //                             <FiCheck className="text-yellow-400 mt-2 mr-2" />
-    //                             <span className="bg-green-400  text-black py-1 px-6 rounded-full">
-    //                                 {plan.ai}
-    //                             </span>
-    //                         </div>
-    //                     )}
-
-    //                     <div className="flex gap-4 p-6 w-full ">
-    //                         <button
-    //                             onClick={() => {
-    //                                 setShowForm(true);
-    //                                 setsubscriptionType(plan.subscriptionType); // pass value directly
-    //                             }}
-    //                             className="px-6 py-2  bg-blue-600 cursor-pointer w-full text-white font-semibold rounded-md transition shadow-lg"
-    //                         >
-    //                             {plan.button}
-    //                         </button>
-    //                     </div>
-
-    //                     {showForm && (
-    //                         <StartFreeTrial
-    //                             onClose={() => setShowForm(false)}
-    //                             subscriptionType={subscriptionType}
-    //                         />
-    //                     )}
-
-    //                 </div>
-
-    //             ))}
-    //         </div>
-    //     </div>
-    // );
-
-
-
 
     return (
         <div className="relative py-20 min-h-screen px-4 bg-white">
