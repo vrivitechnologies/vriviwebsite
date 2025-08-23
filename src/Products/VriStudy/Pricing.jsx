@@ -9,8 +9,8 @@ const Pricing = () => {
     const pricingPlans = [
         {
             name: "Starter Package",
-            price: "999",
-            billing: "/month",
+            price: "499",
+            billing: "/month/user",
             features: [
                 "Lead Management",
                 "Student Management",
@@ -19,7 +19,6 @@ const Pricing = () => {
                 "University programs",
                 "Branches",
                 "Reports",
-                "2 Users",
                 "20000 leads"
             ],
             button: "Start Free Trial",
@@ -27,8 +26,8 @@ const Pricing = () => {
         },
         {
             name: "Pro Package",
-            price: "1499",
-            billing: "/month",
+            price: "999",
+            billing: "/month/user",
             badge: "MOST POPULAR",
             features: [
                 "Lead Management",
@@ -38,7 +37,6 @@ const Pricing = () => {
                 "University programs",
                 "Branches",
                 "Reports",
-                "5 Users",
                 "50000 leads",
                 "Sub-domain",
                 "Weekly Backup (max 4 weeks)",
@@ -48,8 +46,8 @@ const Pricing = () => {
         },
         {
             name: "Enterprise Package",
-            price: "3999",
-            billing: "/month",
+            price: "1999",
+            billing: "/month/user",
             features: [
                 "Lead Management",
                 "Student Management",
@@ -58,16 +56,21 @@ const Pricing = () => {
                 "University programs",
                 "Branches",
                 "Reports",
-                "Unlimited users",
-                "2 lakh leads",
+                "Unlimited leads",
                 "Sub-domain",
+                "Paymnet and Partner Management",
                 "Weekly Backup (max 1 years)",
+                "Data retention 2 Years"
             ],
             ai: "AI Assistant",
             button: "Start Free Trial",
             subscriptionType: "Enterprise"
         }
     ];
+
+    const note = {
+        note : "Prices are exclusive of GST or taxes. Charges will be billed annually."
+    }
 
     return (
         <div className="relative py-20 min-h-screen px-4 bg-white">
@@ -89,8 +92,7 @@ const Pricing = () => {
                     return (
                         <div
                             key={index}
-                            className={`rounded-2xl relative flex flex-col shadow-lg hover:shadow-xl transition  ${cardGradients[index]}`}
-                        >
+                            className={`rounded-2xl relative flex flex-col shadow-lg hover:shadow-xl transition  ${cardGradients[index]}`}>
                             {/* Card header */}
                             <div className="text-center rounded-t-2xl px-6 py-1.5 relative">
                                 {plan.badge && (
@@ -152,6 +154,9 @@ const Pricing = () => {
                         </div>
                     );
                 })}
+            </div>
+            <div className="py-5 px-5 max-w-6xl mx-auto">
+                <p className="text-xl font-medium text-gray-700">*{note.note}</p>
             </div>
         </div>
     );

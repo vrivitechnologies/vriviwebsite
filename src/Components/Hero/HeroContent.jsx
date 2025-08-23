@@ -14,7 +14,7 @@ export const Productcontent = {
     emailPlaceholder: "Enter your email",
     buttonText: "Start 30 Days Free Trial",
     stats: [
-        { label: "Customers", value: "2", bgColor: "bg-purple-100" },
+        { label: "Customers", value: "2+", bgColor: "bg-purple-100" },
         { label: "Students", value: "50,000+", bgColor: "bg-green-100" },
         { label: "Applications ", value: "100+", bgColor: "bg-blue-100" },
         { label: "Process Time", value: "50% faster", bgColor: "bg-yellow-100" }

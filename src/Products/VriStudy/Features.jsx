@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Users, Building2, FileCheck2, ShieldCheck, Smartphone, Section } from "lucide-react";
 import { FaCheck } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
+import StudentProfile from "../../assets/Profile.png";
+import StudentUniversities from "../../assets/Universities.png";
+import StudentDocumnets from "../../assets/Documents.png";
+import StudentDashboard from "../../assets/StudentDashboard.png";
+import DocumentsReview from "../../assets/DocumentsReview.png";
+import UniversityApplns from "../../assets/UniversityApplns.png";
 
 const headings = {
   heading: "Manage Every Step of the Study Abroad Journey in One Place",
@@ -261,3 +267,4 @@ const Features = () => {
 };
 
 export default Features;
+

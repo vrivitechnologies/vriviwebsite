@@ -18,6 +18,7 @@ import StudentDocumnets from "../../assets/Documents.png";
 import StudentDashboard from "../../assets/StudentDashboard.png";
 import DocumentsReview from "../../assets/DocumentsReview.png";
 import UniversityApplns from "../../assets/UniversityApplns.png";
+import StudyAbroadWorkFlow from "../../assets/StudyAbroadWorkFlow.png";
 
 const steps = [
     {
