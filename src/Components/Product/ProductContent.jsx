@@ -13,7 +13,8 @@ export const products = [
         "University Shortlisting",
         "Document & Application Tracking",
         "Role-Based Access & Permissions",
-        "Responsive Design"
+        "Responsive Design",
+        "Payment and Partner Management"
       ],
       adminDasboard
     },

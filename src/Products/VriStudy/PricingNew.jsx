@@ -387,9 +387,6 @@ const PricingNew = () => {
                                     <p className="text-gray-600 text-sm font-medium">{plan.billing}</p>
                                 </div>
 
-                                <div className="text-sm">
-                                    <p className="">{plan.note}</p>
-                                </div>
                             </div>
 
                             {/* Features - flex-1 to take available space */}
@@ -444,6 +441,7 @@ const PricingNew = () => {
             {/* Note */}
             <div className="max-w-6xl mx-auto  pt-6">
                 <p className="text-gray-700 text-sm">* {note.note}</p>
+                <p className="text-gray-700 text-sm">* Required minimum 2 Users</p>
             </div>
 
             {/* Form Modal */}
