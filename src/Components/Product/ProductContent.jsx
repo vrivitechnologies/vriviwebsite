@@ -14,7 +14,8 @@ export const products = [
         "Document & Application Tracking",
         "Role-Based Access & Permissions",
         "Responsive Design",
-        "Payment and Partner Management"
+        "Payment and Invoices",
+        "Partner Management"
       ],
       adminDasboard
     },
