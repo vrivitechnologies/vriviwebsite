@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import { Users, Building2, FileCheck2, ShieldCheck, Smartphone, Section } from "lucide-react";
+import { Users, Building2, FileCheck2, ShieldCheck, Smartphone, Handshake, Receipt } from "lucide-react";
+
 import { FaCheck, FaArrowRight, FaStar } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa6";
-import StudentProfile from "../../assets/Profile.png";
-import StudentUniversities from "../../assets/Universities.png";
-import StudentDocumnets from "../../assets/Documents.png";
-import StudentDashboard from "../../assets/StudentDashboard.png";
-import DocumentsReview from "../../assets/DocumentsReview.png";
-import UniversityApplns from "../../assets/UniversityApplns.png";
 import AIAssistant from "../../assets/AIAssistant.png";
 import LeadsAndStudents from "../../assets/LeadsAndStudents.png";
+import Partner from "../../assets/partner.png";
 import ShortlistUni from "../../assets/ShortlistUni.png";
-import DocumentsAndApplicationTrack from "../../assets/DocumentsAndApplicationTrack.png" 
+import Payments from "../../assets/payments.png";
+import DocumentsAndApplicationTrack from "../../assets/DocumentsAndApplicationTrack.png"
 import RoleBased from "../../assets/RoleBased.png"
-import Responsive from "../../assets/Responsive.png" 
+import Responsive from "../../assets/Responsive.png"
 import { Cpu, } from "lucide-react";
+
 
 const headings = {
   heading: "Manage Every Step of the Study Abroad Journey in One Place",
@@ -113,6 +111,41 @@ const featuresData = [
   },
   {
     id: 6,
+    title: "Partner Management",
+    subTitle: "Efficiently manage your agents and partners",
+    icon: Handshake,
+    image: Partner,
+    gradient: "from-yellow-500 to-yellow-500",
+    accentColor: "purple",
+    details: {
+      heading: "Streamlined Partner Operations",
+      subheading: "Manage Super Agents, Sub Agents, and commissions with ease.",
+      points: [
+        "Create and manage Super Agents for higher-level operations",
+        "Add Sub Agents under each Super Agent",
+      ],
+    },
+  },
+
+  {
+    id: 7,
+    title: "Payments & Invoice Management",
+    subTitle: "Record payments and generate invoices quickly",
+    icon: Receipt,
+    image: Payments, 
+    gradient: "from-blue-500 to-green-500",
+    accentColor: "blue-green",
+    details: {
+      heading: "Seamless Payment & Invoice Workflow",
+      subheading: "Track payments and generate printable invoices effortlessly.",
+      points: [
+        "Record all successful transactions in the system",
+        "Enter details, generate invoices, and print them instantly",
+      ],
+    },
+  },
+  {
+    id: 8,
     title: "Responsive Design",
     subTitle: "Seamless access across all devices",
     icon: Smartphone,
@@ -137,20 +170,20 @@ const FeaturesNew = () => {
   return (
     <div id="Features" className="py-20 px-4 bg-gray-50 min-h-screen">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30" 
-           style={{
-             backgroundImage: `radial-gradient(circle, #d1d5db 1px, transparent 1px)`,
-             backgroundSize: '40px 40px'
-           }}
+      <div className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `radial-gradient(circle, #d1d5db 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }}
       ></div>
 
       {/* Header */}
       <div className="relative max-w-4xl mx-auto text-center mb-16">
-        
+
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
           {headings.heading}
         </h2>
-        
+
         <p className="text-xl text-gray-600 leading-relaxed">
           {headings.subheading}
         </p>
@@ -169,25 +202,23 @@ const FeaturesNew = () => {
                 <div
                   key={item.id}
                   onClick={() => setSelected(item)}
-                  className={`group cursor-pointer p-4 rounded-xl transition-all duration-300 border-2 ${
-                    isSelected 
-                      ? 'bg-white border-gray-200 shadow-lg scale-105' 
-                      : 'bg-white/70 border-gray-100 hover:bg-white hover:shadow-md hover:scale-[1.02]'
-                  }`}
+                  className={`group cursor-pointer p-4 rounded-xl transition-all duration-300 border-2 ${isSelected
+                    ? 'bg-white border-gray-200 shadow-lg scale-105'
+                    : 'bg-white/70 border-gray-100 hover:bg-white hover:shadow-md hover:scale-[1.02]'
+                    }`}
                 >
                   <div className="flex items-center gap-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${item.gradient} flex items-center justify-center shadow-md`}>
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
                       <p className="text-sm text-gray-600 leading-snug">{item.subTitle}</p>
                     </div>
-                    
-                    <FaArrowRight className={`w-4 h-4 transition-all duration-300 ${
-                      isSelected ? 'text-gray-700 translate-x-1' : 'text-gray-400'
-                    }`} />
+
+                    <FaArrowRight className={`w-4 h-4 transition-all duration-300 ${isSelected ? 'text-gray-700 translate-x-1' : 'text-gray-400'
+                      }`} />
                   </div>
                 </div>
               );
@@ -201,7 +232,7 @@ const FeaturesNew = () => {
                 {/* Header */}
                 <div className={`p-6 bg-gradient-to-r ${selected.gradient} text-white`}>
 
-                  
+
                   <h3 className="text-3xl font-bold mb-2">{selected.details.heading}</h3>
                   <p className="text-lg opacity-90">{selected.details.subheading}</p>
                 </div>
@@ -223,8 +254,8 @@ const FeaturesNew = () => {
                   {/* Image */}
                   <div className="relative">
                     <div className=" rounded-xl ">
-                      <img 
-                        src={selected.image} 
+                      <img
+                        src={selected.image}
                         alt={selected.title}
                         className="w-full h-auto rounded-lg shadow-sm"
                       />
@@ -260,9 +291,8 @@ const FeaturesNew = () => {
                   </div>
                 </div>
                 <FaChevronDown
-                  className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
-                    isSelected ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${isSelected ? "rotate-180" : ""
+                    }`}
                 />
               </div>
 
@@ -273,7 +303,7 @@ const FeaturesNew = () => {
                     <h4 className="text-xl font-bold mb-1">{item.details.heading}</h4>
                     <p className="opacity-90">{item.details.subheading}</p>
                   </div>
-                  
+
                   <div className="p-4 space-y-4">
                     {/* Features */}
                     <div className="space-y-3">
@@ -289,8 +319,8 @@ const FeaturesNew = () => {
 
                     {/* Image */}
                     <div className=" rounded-lg border border-gray-200">
-                      <img 
-                        src={item.image} 
+                      <img
+                        src={item.image}
                         alt={item.title}
                         className="w-full h-auto rounded object-cover"
                       />

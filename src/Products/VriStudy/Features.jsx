@@ -30,7 +30,7 @@ const featuresData = [
       points: [
         "Generate Letter of Recommendation",
         "Compare LOR documents and compatability scores",
-        
+
       ],
     },
   },
@@ -107,6 +107,24 @@ const featuresData = [
         "Admins assign permissions to employees",
         "Grant access to specific modules (Leads, Students, Applications)",
         "Control edit, delete, and view rights"
+      ],
+    },
+  },
+  {
+    id: 6,
+    title: "Partner Management",
+    subTitle: "Efficiently manage your agents and partners",
+    icon: Smartphone,
+    color: {
+      bg: "bg-purple-200",
+      text: "text-purple-200",
+    },
+    details: {
+      heading: "Streamlined Partner Operations",
+      subheading: "Manage Super Agents, Sub Agents, and commissions with ease.",
+      points: [
+        "Create and manage Super Agents for higher-level operations",
+        "Add Sub Agents under each Super Agent",
       ],
     },
   },
