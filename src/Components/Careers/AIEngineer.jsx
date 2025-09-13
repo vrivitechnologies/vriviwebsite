@@ -64,7 +64,7 @@ const jobDetails = {
     link: "https://forms.gle/BamBwJzBr82hLVSU7",
 };
 
-const Description = () => {
+const AIEngineer = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -226,4 +226,4 @@ const Description = () => {
     );
 };
 
-export default Description;
+export default AIEngineer;

@@ -232,7 +232,7 @@ const HeaderWithBgWhite = () => {
 
                         <button
                             type="button"
-                            onClick={() => handleNavItemClick("Careers")}
+                            onClick={() => handleNavItemClick("careers")}
                             className="nav-link cursor-pointer"
                         >
                             {content.rightLinks.Careers}
@@ -425,7 +425,7 @@ const HeaderWithBgWhite = () => {
 
                         <button
                             type="button"
-                            onClick={() => handleNavItemClick("Careers")}
+                            onClick={() => handleNavItemClick("careers")}
                             className="cursor-pointer text-left"
                         >
                             {content.rightLinks.Careers}

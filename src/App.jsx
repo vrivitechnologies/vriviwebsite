@@ -7,7 +7,7 @@ import PricingPlan from './Products/VriStudy/PricingPlan';
 import VriStusyHomePage from './Products/VriStudy/VriStusyHomePage';
 import HomePage from './Components/HomePage';
 import ProductLayout from './ProductLayout';
-import Description from './Components/Careers/Description';
+import AIEngineer from './Components/Careers/AIEngineer';
 
 const App = () => {
   return (
@@ -38,10 +38,10 @@ const App = () => {
           }
         />
         <Route
-          path="/careers"
+          path="/careers/aiengineer"
           element={
             <Layout>
-              <Description />
+              <AIEngineer />
             </Layout>
           }
         />

@@ -10,7 +10,7 @@ export const footerText = {
     { label: "Services", url: "#services" },
     { label: "Products", url: "#products" },
     { label: "Our Expertise", url: "#expertise" },
-    { label: "Careers", url: "#Careers" },
+    { label: "Careers", url: "#careers" },
   ],
   contactInfo: {
     email: "contact@vrivi.com",

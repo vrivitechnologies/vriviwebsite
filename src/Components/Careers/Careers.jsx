@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const CareersSection = () => {
   const navigate = useNavigate();
   return (
-    <section id="Careers" className="py-20 ">
+    <section id="careers" className="py-20 ">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl text-center font-semibold  mb-12">Careers</h2>
         <div className="grid md:grid-cols-2 gap-8 justify-center items-center w-full">
