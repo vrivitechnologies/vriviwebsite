@@ -111,7 +111,7 @@ const Hero1Content = ({ pauseAutoSlide, resumeAutoSlide }) => {
                     </div> */}
 
                     <div className="flex w-full items-center justify-center mt-6 text-center mx-auto">
-                        <button onClick={() => navigate("/vristudyhomepage")} className="px-6 py-3 bg-blue-500 cursor-pointer text-white font-semibold rounded-md  transition shadow-lg">
+                        <button onClick={() => navigate("/vristudy")} className="px-6 py-3 bg-blue-500 cursor-pointer text-white font-semibold rounded-md  transition shadow-lg">
                             {Productcontent.buttonText}
                         </button>
                     </div>

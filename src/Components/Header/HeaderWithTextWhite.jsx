@@ -40,7 +40,7 @@ const HeaderWithTextWhite = () => {
         // optional: e && e.preventDefault();
         setProductsOpen(false);
         setSidebarOpen(false);
-        navigate("/vristudyhomepage");
+        navigate("/vristudy");
     };
 
     // Sticky header effect

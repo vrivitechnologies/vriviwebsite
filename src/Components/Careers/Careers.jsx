@@ -1,7 +1,8 @@
 import React from "react";
 import { careers } from "./CareersContent";
-
+import { useNavigate } from "react-router-dom";
 const CareersSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="Careers" className="py-20 ">
       <div className="max-w-7xl mx-auto px-6">
@@ -17,19 +18,20 @@ const CareersSection = () => {
               </h3>
               <p className="text-gray-600 mb-4">{job.description}</p>
 
-              <div className="inline-block  pt-1 pb-2 px-4 cursor-pointer text-white bg-gradient-to-r from-blue-500 to-purple-600 
+             <div
+                className="inline-block pt-1 pb-2 px-4 cursor-pointer text-white bg-gradient-to-r from-blue-500 to-purple-600 
                            rounded-full shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-purple-700 
-                           transition-all duration-300">
-                <a
-                  href={job.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=""
-                >
-                  Apply
-                </a>
+                           transition-all duration-300"
+                onClick={() => {
+                  if (job.nav) {
+                    navigate(job.nav); // internal navigation
+                  } else {
+                    window.open(job.link, "_blank", "noopener,noreferrer"); // external link
+                  }
+                }}
+              >
+                Apply
               </div>
-
             </div>
           ))}
         </div>

@@ -6,7 +6,7 @@ export const products = [
       name: "VRISTUDY - AI Powered StudyAbroad CRM",
       description:
         "A complete CRM platform designed for overseas education consultants to manage leads, applications, and communication effectively.",
-      link: "/vristudyhomepage",
+      link: "/vristudy",
       point:[
         "AI Assistant",
         "Lead & Student Management",

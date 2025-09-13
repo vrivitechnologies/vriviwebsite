@@ -11,5 +11,5 @@ export const content = {
         contact: "Contact Us",
         Home:"Home"
     },
-    product: "VRISTUDY - Study Abroad CRM"
+    product: "VRISTUDY - AI Powered Study Abroad CRM"
 };
